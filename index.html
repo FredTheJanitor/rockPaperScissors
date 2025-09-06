@@ -11,14 +11,27 @@
         console.log('hello bitch');
         // Get Computer Choice of Rock Paper Scissors
         // declare a function called getComputerChoice
+        function getComputerChoice {
             // create code within getComputerChoice 
-            // randomly generate a number
+            // randomly generate a number and assign to variable
+            let randomNumber = Math.random();
             // divide randomly generated number into 3 equal segments
+            if (randomNumber <= .33) {    
                 //if first segment assign a value of "rock"
+                return "rock";
+            }
                 //if else the second segment assign a value of "paper"
-                //else return scissors  
+            else if (randomNumber <= .66) {
+                return "paper";
+                }
+                //else return scissors
+            else {
+                return "scissors"
+            }
+            ;
             // return value selected by conditional
-        // 
+            }
+            
     </script>
 </body>
 </html>
