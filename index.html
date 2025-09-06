@@ -34,21 +34,37 @@
         // do the thing. and let "rock paper or scissors" be returned to variable
         let computerChoice = getComputerChoice();
         // log answer to console.
-        console.log(computerChoice);  
-        // Write the logic to get the human choice
-        // set up a string variable named humanChoice to collect value
-        let humanChoice;
-        // declare a function called getHumanChoice to accurately obtain choice
+        console.log(computerChoice); 
+        
+        // Comment Out first attempt
+            // // Write the logic to get the human choice
+            // // set up a string variable named humanChoice to collect value
+            // let humanChoice;
+            // // declare a function called getHumanChoice to accurately obtain choice
+            // function getHumanChoice() {
+            //     // prompt the user to input their choice via the dom
+            //     let userInput = toString(prompt('enter rock paper or scissors plz'));
+            //     console.log(userInput);
+            //     // return the users choice as a string of either `rock` `paper` or `scissors`
+            //     return userInput;
+            // }
+            // // assign function with input to variable humanChoice
+            // humanChoice = getHumanChoice();
+            // // log the humanChoice variable to the console
+            // console.log(humanChoice);
+
+        // Write logic to get human choice returned to console
+        // declare function named getHumanChoice with parameters empty
         function getHumanChoice() {
-            // prompt the user to input their choice via the dom
-            let userInput = toString(prompt('enter rock paper or scissors plz'));
-            // return the users choice as a string of either `rock` `paper` or `scissors`
-            return userInput;
+            // prompt user to type rock paper or scissors
+            let selection = prompt(`rock,paper,scissors`);
+            // return input to function
+            return selection;
         }
-        // assign function with input to variable humanChoice
-        humanChoice = getHumanChoice();
-        // log the humanChoice variable to the console
-        console.log(humanChoice);
+        // assign variable to output and call function
+        let humanChoice = getHumanChoice();
+        // log variable to the console
+        console.log(humanChoice); 
         
     </script>
 </body>
