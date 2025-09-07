@@ -271,13 +271,35 @@
             let totalHumanScore = humanScore;
             let totalComputerScore = computerScore;
             console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            humanScore =0;
+            computerScore=0;
         // create logic that tracks score properly
             playRound();
             totalHumanScore = totalHumanScore + humanScore;
             totalComputerScore = totalComputerScore + computerScore;
             console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            humanScore =0;
+            computerScore=0;
             // I'm thinking that the nesting of the initialization within playGame may remove potentital scope issue
             // Worry: humanScore & computerScore will reset to 0 after rounds
+            playRound();
+            totalHumanScore = totalHumanScore + humanScore;
+            totalComputerScore = totalComputerScore + computerScore;
+            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            humanScore =0;
+            computerScore=0;
+            playRound();
+            totalHumanScore = totalHumanScore + humanScore;
+            totalComputerScore = totalComputerScore + computerScore;
+            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            humanScore =0;
+            computerScore=0;
+            playRound();
+            totalHumanScore = totalHumanScore + humanScore;
+            totalComputerScore = totalComputerScore + computerScore;
+            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            humanScore =0;
+            computerScore=0;
         // create logic that declares winner(or tie) based on aggregate game score outcomes
             // if humanScore > computer score
             // log human win
