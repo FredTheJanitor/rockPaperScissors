@@ -270,42 +270,37 @@
             // define a variable of total score that is incremented by humanScore/ computerScore
             let totalHumanScore = humanScore;
             let totalComputerScore = computerScore;
-            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            console.log(`GRAND TOTAL:
+            humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
             humanScore =0;
             computerScore=0;
         // create logic that tracks score properly
             playRound();
-            totalHumanScore = totalHumanScore + humanScore;
-            totalComputerScore = totalComputerScore + computerScore;
-            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-            humanScore =0;
-            computerScore=0;
+            function scoreMeCaptain() {
+                totalHumanScore = totalHumanScore + humanScore;
+                totalComputerScore = totalComputerScore + computerScore;
+                console.log(`GRAND TOTAL:
+                humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+                humanScore =0;
+                computerScore=0;
+            }
+            scoreMeCaptain();
             // I'm thinking that the nesting of the initialization within playGame may remove potentital scope issue
             // Worry: humanScore & computerScore will reset to 0 after rounds
             playRound();
-            totalHumanScore = totalHumanScore + humanScore;
-            totalComputerScore = totalComputerScore + computerScore;
-            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-            humanScore =0;
-            computerScore=0;
+            scoreMeCaptain();
             playRound();
-            totalHumanScore = totalHumanScore + humanScore;
-            totalComputerScore = totalComputerScore + computerScore;
-            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-            humanScore =0;
-            computerScore=0;
+            scoreMeCaptain();
             playRound();
-            totalHumanScore = totalHumanScore + humanScore;
-            totalComputerScore = totalComputerScore + computerScore;
-            console.log(`humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-            humanScore =0;
-            computerScore=0;
+            scoreMeCaptain();
         // create logic that declares winner(or tie) based on aggregate game score outcomes
+            function showTotal() {
             // if humanScore > computer score
             // log human win
             // else if computer score > humanScore
             // log computer win
             // else log tie
+            }
         }
         playGame();
     </script>
