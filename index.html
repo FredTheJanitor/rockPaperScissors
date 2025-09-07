@@ -260,8 +260,8 @@
                     alert("error computer returning somethin weird yo");
                 };
                 // Logic Error: refs: ScoreCount - score is not incrementing properly
-                console.log(`ROUND SCORE:
-                humanity score: ${humanScore}, robot score: ${computerScore}`);
+                // console.log(`ROUND SCORE:
+                // humanity score: ${humanScore}, robot score: ${computerScore}`);
             }
         // create logic to play game 5 times (call play round 5 times)
             // this is probably a for loop situation which it says not to worry too much about right now
@@ -270,8 +270,8 @@
             // define a variable of total score that is incremented by humanScore/ computerScore
             let totalHumanScore = humanScore;
             let totalComputerScore = computerScore;
-            console.log(`GRAND TOTAL:
-            humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+            // console.log(`GRAND TOTAL:
+            // humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
             humanScore =0;
             computerScore=0;
         // create logic that tracks score properly
@@ -279,8 +279,8 @@
             function scoreMeCaptain() {
                 totalHumanScore = totalHumanScore + humanScore;
                 totalComputerScore = totalComputerScore + computerScore;
-                console.log(`GRAND TOTAL:
-                humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
+                // console.log(`GRAND TOTAL:
+                // humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
                 humanScore =0;
                 computerScore=0;
             }
@@ -293,14 +293,29 @@
             scoreMeCaptain();
             playRound();
             scoreMeCaptain();
-        // create logic that declares winner(or tie) based on aggregate game score outcomes
+            // create logic that declares winner(or tie) based on aggregate game score outcomes
             function showTotal() {
-            // if humanScore > computer score
-            // log human win
-            // else if computer score > humanScore
-            // log computer win
-            // else log tie
+                // if humanScore > computer score
+                if (totalHumanScore > totalComputerScore){
+                // log human win
+                console.log(`WINNER:
+                Humanity has prevailed in its fight against the cold, indifferent machines... 
+                for now`);
+                }
+                // else if computer score > humanScore
+                else if (totalComputerScore > totalHumanScore){
+                // log computer win
+                console.log(`LOSER:
+                Despite futile efforts, the organic lifeforms fail to survive their relentless creations`);
+                }
+                // else log tie
+                else {
+                    console.log(`TIE: the war between man and machine rages on to no conclusion.`)
+                }
+                console.log(`GRAND TOTAL:
+                humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
             }
+            showTotal();
         }
         playGame();
     </script>
