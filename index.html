@@ -97,12 +97,14 @@
                 // else if human choice is paper
                 else if (humanChoice === "paper") {
                     // increment score win for humanScore with for loop maybe?
+                    humanScore = humanScore++;
                     // return win paper beats rock message
                     console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
                 }
                 // else
                 else {
                     // increment score win for computerScore with for loop maybe?
+                    computerScore = computerScore++;
                     // return loss rock beats scissors message
                     console.log(`Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`);
                 };
@@ -112,6 +114,7 @@
                 // nested if humanChoice is rock
                 if (humanChoice === "rock") {
                     // increment score win for computerScore with for loop maybe?
+                    computerScore = computerScore++;
                     // return loss paper beats rock message
                     console.log(`Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`);
                 }
@@ -123,6 +126,7 @@
                 // else
                 else {
                     // increment score win for humanScore with for loop maybe?
+                    humanScore = humanScore++;
                     // return win scissors beats paper message
                     console.log(`Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`);
                 }
@@ -132,12 +136,14 @@
                 // nested if humanChoice is rock
                 if (humanChoice === "rock") {
                     // increment score win for humanScore with for loop maybe?
+                    humanScore = humanScore++;
                     // return win rock beats scissors message and count win for humanScore
                     console.log(`Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`);
                 }
                 // else if human choice is paper
                 else if (humanChoice === "paper") {
                     // increment score win for computerScore with for loop maybe?
+                    computerScore = computerScore++;
                     // return loss scissors beats paper message and count win for computerScore
                     console.log("Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords");
                 }
@@ -149,6 +155,7 @@
             } else {
                 alert("error computer returning somethin weird yo");
             };
+            console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
         }
     </script>
 </body>
