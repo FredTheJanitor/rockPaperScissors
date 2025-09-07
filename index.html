@@ -71,6 +71,41 @@
         let humanScore = 0;
         // create variable named computerScore with initial value of 0
         let computerScore = 0;
+
+        // begin round/play logic
+        // single round logic
+        // declare a new function named playRound with the parameters humanChoice & computerChoice
+        // take these choices as argumants
+        // move variables that were global perhaps into local scope within this function
+        // make the humanChoice work regardless of case
+        // create logic tree to decide which scenarios output which message and score
+            // if computerChoice is rock
+                // nested if humanChoice is rock
+                    // return tie both rock message and do not change score
+                // else if human choice is paper
+                    // increment score win for humanScore with for loop maybe?
+                    // return win paper beats rock message
+                // else
+                    // increment score win for computerScore with for loop maybe?
+                    // return loss rock beats scissors message
+            // else if computer choice is paper
+                // nested if humanChoice is rock
+                    // increment score win for computerScore with for loop maybe?
+                    // return loss paper beats rock message
+                // else if human choice is paper
+                    // return tie both paper message and do not change score
+                // else
+                    // increment score win for humanScore with for loop maybe?
+                    // return win scissors beats paper message
+            // else if computer choice is scissors
+                // nested if humanChoice is rock
+                    // increment score win for humanScore with for loop maybe?
+                    // return win rock beats scissors message and count win for humanScore
+                // else if human choice is paper
+                    // increment score win for computerScore with for loop maybe?
+                    // return loss scissors beats paper message and count win for computerScore
+                // else
+                    // return tie both scissors message and do not change score
         
     </script>
 </body>
