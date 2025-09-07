@@ -32,10 +32,10 @@
             // return value selected by conditional
         }
         // COMMENT OUT Prior Executions for logs
-        // do the thing. and let "rock paper or scissors" be returned to variable
-        // let computerChoice = getComputerChoice();
-        // // log answer to console.
-        // console.log(computerChoice); 
+            // do the thing. and let "rock paper or scissors" be returned to variable
+            // let computerChoice = getComputerChoice();
+            // // log answer to console.
+            // console.log(computerChoice); 
         
         // Comment Out first attempt
             // // Write the logic to get the human choice
@@ -65,10 +65,10 @@
         }
     
         // COMMENT OUT Prior Executions for logs
-        // // assign variable to output and call function
-        // let humanChoice = getHumanChoice();
-        // // log variable to the console
-        // console.log(humanChoice);
+            // // assign variable to output and call function
+            // let humanChoice = getHumanChoice();
+            // // log variable to the console
+            // console.log(humanChoice);
         
         // define variables to hold score
         // create variable named humanScore with initial value of 0
@@ -163,7 +163,25 @@
             // Logic Error: refs: ScoreCount - score is not incrementing properly
             console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
         }
-        playRound();
+        // Write the logic to play the entire game -Your game will play 5 rounds. You will write a function 
+        //      named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares
+        //      a winner at the end.
+        // Create function called playGame
+        function playGame() {
+        // declare playRound and score variables within playGame
+        // create logic to play game 5 times (call play round 5 times)
+            // this is probably a for loop situation which it says not to worry too much about right now
+            // calling round once then capturing scores is vital for continuity of final score
+        // create logic that tracks score properly
+            // I'm thinking that the nesting of the initialization within playGame may remove potentital scope issue
+            // Worry: humanScore & computerScore will reset to 0 after rounds
+        // create logic that declares winner(or tie) based on aggregate game score outcomes
+            // if humanScore > computer score
+            // log human win
+            // else if computer score > humanScore
+            // log computer win
+            // else log tie
+        }
     </script>
 </body>
 </html>
