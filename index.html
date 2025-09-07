@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        console.log('hello bitch');
+        console.log('Welcome to Rock Paper Scissors for the Future of Humanity');
         // Get Computer Choice of Rock Paper Scissors
         // declare a function called getComputerChoice
         function getComputerChoice() {
@@ -196,11 +196,11 @@
                     // else if human choice is paper
                     else if (humanChoice === "paper") {
                         // increment score win for humanScore with for loop maybe?
-                        // refs: ScoreCount
-                        // switch computerScore = computerScore++ to computerScore = ++computerScore etc
+                        // SOLVED: refs: ScoreCount
+                        // SOLVED: switch computerScore = computerScore++ to computerScore = ++computerScore etc
                         humanScore = 1;
-                        // refs: ScoreCount
-                        // score is not incremented within block scope. syntax misunderstanding?
+                        // SOLVED: refs: ScoreCount
+                        // SOLVED: score is not incremented within block scope. syntax misunderstanding?
                         // console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
                         // return win paper beats rock message
                         console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
@@ -259,7 +259,7 @@
                 } else {
                     alert("error computer returning somethin weird yo");
                 };
-                // Logic Error: refs: ScoreCount - score is not incrementing properly
+                // SOLVED: Logic Error: refs: ScoreCount - score is not incrementing properly
                 // console.log(`ROUND SCORE:
                 // humanity score: ${humanScore}, robot score: ${computerScore}`);
             }
@@ -312,6 +312,7 @@
                 else {
                     console.log(`TIE: the war between man and machine rages on to no conclusion.`)
                 }
+                // Log Grand Total
                 console.log(`GRAND TOTAL:
                 humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
             }
