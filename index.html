@@ -87,6 +87,7 @@
         
         // create logic tree to decide which scenarios output which message and score
             // if computerChoice is rock
+            if (computerChoice === "rock") {
                 // nested if humanChoice is rock
                     // return tie both rock message and do not change score
                 // else if human choice is paper
@@ -95,7 +96,9 @@
                 // else
                     // increment score win for computerScore with for loop maybe?
                     // return loss rock beats scissors message
+            }
             // else if computer choice is paper
+            else if (computerChoice === "paper") {
                 // nested if humanChoice is rock
                     // increment score win for computerScore with for loop maybe?
                     // return loss paper beats rock message
@@ -104,7 +107,9 @@
                 // else
                     // increment score win for humanScore with for loop maybe?
                     // return win scissors beats paper message
+            }
             // else if computer choice is scissors
+            else if (computerChoice === "scissors") {
                 // nested if humanChoice is rock
                     // increment score win for humanScore with for loop maybe?
                     // return win rock beats scissors message and count win for humanScore
@@ -113,6 +118,9 @@
                     // return loss scissors beats paper message and count win for computerScore
                 // else
                     // return tie both scissors message and do not change score
+            } else {
+                alert("error computer returning somethin weird yo");
+            };
         }
     </script>
 </body>
