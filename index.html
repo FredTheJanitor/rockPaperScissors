@@ -58,10 +58,11 @@
         // declare function named getHumanChoice with parameters empty
         function getHumanChoice() {
             // prompt user to type rock paper or scissors
-            let selection = prompt(`rock,paper,scissors`);
+            let selection = prompt(`rock,paper,scissors`).toLowerCase();
             // return input to function
             return selection;
         }
+    
         // COMMENT OUT Prior Executions for logs
         // // assign variable to output and call function
         // let humanChoice = getHumanChoice();
@@ -79,9 +80,9 @@
         // declare a new function named playRound with the parameters humanChoice & computerChoice
         function playRound(humanChoice, computerChoice) {
         // take these choices as argumants
-        let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
         // move variables that were global perhaps into local scope within this function
+            let humanChoice = getHumanChoice();
+            let computerChoice = getComputerChoice();
         // make the humanChoice work regardless of case
         // create logic tree to decide which scenarios output which message and score
             // if computerChoice is rock
