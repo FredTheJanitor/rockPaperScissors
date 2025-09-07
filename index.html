@@ -98,6 +98,9 @@
                 else if (humanChoice === "paper") {
                     // increment score win for humanScore with for loop maybe?
                     humanScore = humanScore++;
+                    // refs: ScoreCount
+                    // score is not incremented within block scope. syntax misunderstanding?
+                    // console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
                     // return win paper beats rock message
                     console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
                 }
@@ -155,6 +158,7 @@
             } else {
                 alert("error computer returning somethin weird yo");
             };
+            // Logic Error: refs: ScoreCount - score is not incrementing properly
             console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
         }
         playRound();
