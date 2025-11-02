@@ -1,416 +1,65 @@
 console.log('Welcome to Rock Paper Scissors for the Future of Humanity');
-        function getComputerChoice() {
-            let randomNumber = Math.random();
-            if (randomNumber <= .33) {    
-                return "rock";
-            }
-            else if (randomNumber <= .66) {
-                return "paper";
-                }
-            else {
-                return "scissors"
-            }
-            ;
-        }
-        function getHumanChoice() {
-            let selection = prompt(`rock,paper,scissors`).toLowerCase();
-            return selection;
-        }
-        function playGame() {
-            let humanScore = 0;
-            let computerScore = 0;
-            function playRound(humanChoice, computerChoice) {
-                humanChoice = getHumanChoice();
-                computerChoice = getComputerChoice();
-                if (computerChoice === "rock") {
-                    if (humanChoice === "rock") {
-                        console.log(`Tie: Dwayne the Rock Johnson ass bo'ah
-                        Rocky BalHOEah ass bih'`);
-                    } else if (humanChoice === "paper") {
-                        humanScore = 1;
-                        console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
-                    } else {
-                        computerScore = 1;
-                        console.log(`Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`);
-                    };
-                }
-                else if (computerChoice === "paper") {
-                    if (humanChoice === "rock") {
-                        computerScore = 1;
-                        console.log(`Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`);
-                    } else if (humanChoice === "paper") {
-                        console.log(`tie: Stuck in an infinite loop: paper vs paper, the crumpling, scribbling and tearing rages on for millenia without victor`);
-                    } else {
-                        humanScore = 1;
-                        console.log(`Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`);
-                    }
-                }
-                else if (computerChoice === "scissors") {
-                    if (humanChoice === "rock") {
-                        humanScore = 1;
-                        console.log(`Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`);
-                    } else if (humanChoice === "paper") {
-                        computerScore = 1;
-                        console.log("Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords");
-                    } else {
-                        console.log("Tie: both scissoring ;)");
-                    }
-                } else {
-                    alert("error computer returning somethin weird yo");
-                };
-            }
-            function scoreMeCaptain() {
-                totalHumanScore = totalHumanScore + humanScore;
-                totalComputerScore = totalComputerScore + computerScore;
-                humanScore =0;
-                computerScore=0;
-            }
-            function firstRoundScore() {
-                let totalHumanScore = humanScore;
-                let totalComputerScore = computerScore;
-                humanScore = 0;
-                computerScore = 0;
-            }
-        // create logic to play game 5 times (call play round 5 times)
-            playRound();
-            firstRoundScore()
-            playRound();
-            scoreMeCaptain();
-            playRound();
-            scoreMeCaptain();
-            playRound();
-            scoreMeCaptain();
-            playRound();
-            scoreMeCaptain();
-            // create logic that declares winner(or tie) based on aggregate game score outcomes
-            function showTotal() {
-                if (totalHumanScore > totalComputerScore){
-                    console.log(`WINNER:
-                    Humanity has prevailed in its fight against the cold, indifferent machines... 
-                    for now`);
-                } else if (totalComputerScore > totalHumanScore){
-                    console.log(`LOSER:
-                    Despite futile efforts, the organic lifeforms fail to survive their relentless creations`);
-                } else {
-                    console.log(`TIE: the war between man and machine rages on to no conclusion.`)
-                }
-                console.log(`GRAND TOTAL:
-                humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-            }
-            showTotal();
-        }
-        playGame();
-
-        // Legacy Code Below for learning purposes in this tutorial
-        // --------------------------------------------------------------------------------- //
-
-        // // Get Computer Choice of Rock Paper Scissors
-        // // declare a function called getComputerChoice
-        // function getComputerChoice() {
-        //     // create code within getComputerChoice 
-        //     // randomly generate a number and assign to variable
-        //     let randomNumber = Math.random();
-        //     // divide randomly generated number into 3 equal segments
-        //     if (randomNumber <= .33) {    
-        //         //if first segment assign a value of "rock"
-        //         return "rock";
-        //     }
-        //         //if else the second segment assign a value of "paper"
-        //     else if (randomNumber <= .66) {
-        //         return "paper";
-        //         }
-        //         //else return scissors
-        //     else {
-        //         return "scissors"
-        //     }
-        //     ;
-        //     // return value selected by conditional
-        // }
-        // // COMMENT OUT Prior Executions for logs
-        //     // do the thing. and let "rock paper or scissors" be returned to variable
-        //     // let computerChoice = getComputerChoice();
-        //     // // log answer to console.
-        //     // console.log(computerChoice); 
         
-        // // Comment Out first attempt
-        //     // // Write the logic to get the human choice
-        //     // // set up a string variable named humanChoice to collect value
-        //     // let humanChoice;
-        //     // // declare a function called getHumanChoice to accurately obtain choice
-        //     // function getHumanChoice() {
-        //     //     // prompt the user to input their choice via the dom
-        //     //     let userInput = toString(prompt('enter rock paper or scissors plz'));
-        //     //     console.log(userInput);
-        //     //     // return the users choice as a string of either `rock` `paper` or `scissors`
-        //     //     return userInput;
-        //     // }
-        //     // // assign function with input to variable humanChoice
-        //     // humanChoice = getHumanChoice();
-        //     // // log the humanChoice variable to the console
-        //     // console.log(humanChoice);
+// --I might just axe this whole thing ngl and wing it --//
+function game(){
+    let grandTotalPlayer = 0
+    let grandTotalComputer = 0
+    // each round should compare human input to random number
+    function round(){
+        let playerInput
+        let playerChoice 
+        playerInput = prompt();
+        // assign rock value of 1, paper: 2 scissors: 3
+        if (playerInput.toLowerCase() === 'rock') {
+            playerChoice = 1;
+        } else if (playerInput.toLowerCase() === 'paper') {
+            playerChoice = 2;
+        } else if (playerInput.toLowerCase() === 'scissors'){
+            playerChoice = 3;
+        } else {
+            alert('ERROR - Player Did Not Input Rock Paper or Scissors');
+            playerChoice = 0;
+        }
+        // this picks a random number 1-3
+        let computerChoice = 1+Math.floor(Math.random()*3);
+        if (playerChoice === computerChoice) {
+            console.log('tie');
+        } else if (playerChoice === 1) {
+            if (computerChoice === 2) {
+                console.log('computer wins');
+                grandTotalComputer += 1
+            } else {
+                console.log('human wins');
+                grandTotalPlayer += 1
+            }
+        } else if (playerChoice === 2) {
+            if (computerChoice === 3) {
+                console.log('computer wins');
+                grandTotalComputer += 1
+            } else {
+                console.log('human wins');
+                grandTotalPlayer += 1
+            }
+        } else if (playerChoice === 3) {
+            if (computerChoice === 1) {
+                console.log('computer wins');
+                grandTotalComputer += 1
+            } else {
+                console.log('human wins');
+                grandTotalPlayer += 1
+            }
+        } else {
+            console.log('ERROR: please try again')
+        }
+        // winner
+    }
+    round();
+    round();
+    console.log(grandTotalComputer);
+    console.log(grandTotalPlayer);
+    // run rounds until win condition with loop
+        // whichever winner add a point to total
 
-        // // Write logic to get human choice returned to console
-        // // declare function named getHumanChoice with parameters empty
-        // function getHumanChoice() {
-        //     // prompt user to type rock paper or scissors
-        //     // make the humanChoice work regardless of case \/
-        //     let selection = prompt(`rock,paper,scissors`).toLowerCase();
-        //     // return input to function
-        //     return selection;
-        // }
-    
-        // // COMMENT OUT Prior Executions for logs
-        //     // // assign variable to output and call function
-        //     // let humanChoice = getHumanChoice();
-        //     // // log variable to the console
-        //     // console.log(humanChoice);
-
-        // // Comment Out Initial location of playRound logic (this was moved to playGame)
-        //     // // define variables to hold score
-        //     // // create variable named humanScore with initial value of 0
-        //     // let humanScore = 0;
-        //     // // create variable named computerScore with initial value of 0
-        //     // let computerScore = 0;
-
-        //     // // begin round/play logic
-        //     // // single round logic
-        //     // // declare a new function named playRound with the parameters humanChoice & computerChoice
-        //     // function playRound(humanChoice, computerChoice) {
-        //     // // take these choices as argumants
-        //     // // move variables that were global perhaps into local scope within this function
-        //     //     humanChoice = getHumanChoice();
-        //     //     computerChoice = getComputerChoice();
-            
-        //     // // create logic tree to decide which scenarios output which message and score
-        //     //     // if computerChoice is rock
-        //     //     if (computerChoice === "rock") {
-        //     //         // nested if humanChoice is rock
-        //     //         if (humanChoice === "rock") {
-        //     //             console.log(`Tie: Dwayne the Rock Johnson ass bo'ah
-        //     //             Rocky BalHOEah ass bih'`);
-        //     //             // log tie both rock message and do not change score
-        //     //         }
-        //     //         // else if human choice is paper
-        //     //         else if (humanChoice === "paper") {
-        //     //             // increment score win for humanScore with for loop maybe?
-        //     //             // refs: ScoreCount
-        //     //             // switch computerScore = computerScore++ to computerScore = ++computerScore etc
-        //     //             humanScore = ++humanScore;
-        //     //             // refs: ScoreCount
-        //     //             // score is not incremented within block scope. syntax misunderstanding?
-        //     //             // console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
-        //     //             // return win paper beats rock message
-        //     //             console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
-        //     //         }
-        //     //         // else
-        //     //         else {
-        //     //             // increment score win for computerScore with for loop maybe?
-        //     //             computerScore = ++computerScore;
-        //     //             // return loss rock beats scissors message
-        //     //             console.log(`Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`);
-        //     //         };
-        //     //     }
-        //     //     // else if computer choice is paper
-        //     //     else if (computerChoice === "paper") {
-        //     //         // nested if humanChoice is rock
-        //     //         if (humanChoice === "rock") {
-        //     //             // increment score win for computerScore with for loop maybe?
-        //     //             computerScore = ++computerScore;
-        //     //             // return loss paper beats rock message
-        //     //             console.log(`Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`);
-        //     //         }
-        //     //         // else if human choice is paper
-        //     //         else if (humanChoice === "paper") {
-        //     //             // return tie both paper message and do not change score
-        //     //             console.log(`tie: Stuck in an infinite loop: paper vs paper, the crumpling, scribbling and tearing rages on for millenia without victor`);
-        //     //         }
-        //     //         // else
-        //     //         else {
-        //     //             // increment score win for humanScore with for loop maybe?
-        //     //             humanScore = ++humanScore;
-        //     //             // return win scissors beats paper message
-        //     //             console.log(`Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`);
-        //     //         }
-        //     //     }
-        //     //     // else if computer choice is scissors
-        //     //     else if (computerChoice === "scissors") {
-        //     //         // nested if humanChoice is rock
-        //     //         if (humanChoice === "rock") {
-        //     //             // increment score win for humanScore with for loop maybe?
-        //     //             humanScore = ++humanScore;
-        //     //             // return win rock beats scissors message and count win for humanScore
-        //     //             console.log(`Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`);
-        //     //         }
-        //     //         // else if human choice is paper
-        //     //         else if (humanChoice === "paper") {
-        //     //             // increment score win for computerScore with for loop maybe?
-        //     //             computerScore = ++computerScore;
-        //     //             // return loss scissors beats paper message and count win for computerScore
-        //     //             console.log("Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords");
-        //     //         }
-        //     //         // else
-        //     //         else {
-        //     //             // return tie both scissors message and do not change score
-        //     //             console.log("Tie: both scissoring ;)");
-        //     //         }
-        //     //     } else {
-        //     //         alert("error computer returning somethin weird yo");
-        //     //     };
-        //     //     // Logic Error: refs: ScoreCount - score is not incrementing properly
-        //     //     console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
-        //     // }
-        // // Write the logic to play the entire game -Your game will play 5 rounds. You will write a function 
-        // //      named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares
-        // //      a winner at the end.
-        // // Create function called playGame
-        // function playGame() {
-        // // declare playRound and score variables within playGame
-        //     // define variables to hold score
-        //     // create variable named humanScore with initial value of 0
-        //     let humanScore = 0;
-        //     // create variable named computerScore with initial value of 0
-        //     let computerScore = 0;
-        //     // begin round/play logic
-        //     // single round logic
-        //     // declare a new function named playRound with the parameters humanChoice & computerChoice
-        //     function playRound(humanChoice, computerChoice) {
-        //     // take these choices as argumants
-        //     // move variables that were global perhaps into local scope within this function
-        //         humanChoice = getHumanChoice();
-        //         computerChoice = getComputerChoice();
-            
-        //     // create logic tree to decide which scenarios output which message and score
-        //         // if computerChoice is rock
-        //         if (computerChoice === "rock") {
-        //             // nested if humanChoice is rock
-        //             if (humanChoice === "rock") {
-        //                 console.log(`Tie: Dwayne the Rock Johnson ass bo'ah
-        //                 Rocky BalHOEah ass bih'`);
-        //                 // log tie both rock message and do not change score
-        //             }
-        //             // else if human choice is paper
-        //             else if (humanChoice === "paper") {
-        //                 // increment score win for humanScore with for loop maybe?
-        //                 // SOLVED: refs: ScoreCount
-        //                 // SOLVED: switch computerScore = computerScore++ to computerScore = ++computerScore etc
-        //                 humanScore = 1;
-        //                 // SOLVED: refs: ScoreCount
-        //                 // SOLVED: score is not incremented within block scope. syntax misunderstanding?
-        //                 // console.log(`humanity score: ${humanScore}, robot score: ${computerScore}`)
-        //                 // return win paper beats rock message
-        //                 console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
-        //             }
-        //             // else
-        //             else {
-        //                 // increment score win for computerScore with for loop maybe?
-        //                 computerScore = 1;
-        //                 // return loss rock beats scissors message
-        //                 console.log(`Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`);
-        //             };
-        //         }
-        //         // else if computer choice is paper
-        //         else if (computerChoice === "paper") {
-        //             // nested if humanChoice is rock
-        //             if (humanChoice === "rock") {
-        //                 // increment score win for computerScore with for loop maybe?
-        //                 computerScore = 1;
-        //                 // return loss paper beats rock message
-        //                 console.log(`Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`);
-        //             }
-        //             // else if human choice is paper
-        //             else if (humanChoice === "paper") {
-        //                 // return tie both paper message and do not change score
-        //                 console.log(`tie: Stuck in an infinite loop: paper vs paper, the crumpling, scribbling and tearing rages on for millenia without victor`);
-        //             }
-        //             // else
-        //             else {
-        //                 // increment score win for humanScore with for loop maybe?
-        //                 humanScore = 1;
-        //                 // return win scissors beats paper message
-        //                 console.log(`Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`);
-        //             }
-        //         }
-        //         // else if computer choice is scissors
-        //         else if (computerChoice === "scissors") {
-        //             // nested if humanChoice is rock
-        //             if (humanChoice === "rock") {
-        //                 // increment score win for humanScore with for loop maybe?
-        //                 humanScore = 1;
-        //                 // return win rock beats scissors message and count win for humanScore
-        //                 console.log(`Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`);
-        //             }
-        //             // else if human choice is paper
-        //             else if (humanChoice === "paper") {
-        //                 // increment score win for computerScore with for loop maybe?
-        //                 computerScore = 1;
-        //                 // return loss scissors beats paper message and count win for computerScore
-        //                 console.log("Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords");
-        //             }
-        //             // else
-        //             else {
-        //                 // return tie both scissors message and do not change score
-        //                 console.log("Tie: both scissoring ;)");
-        //             }
-        //         } else {
-        //             alert("error computer returning somethin weird yo");
-        //         };
-        //         // SOLVED: Logic Error: refs: ScoreCount - score is not incrementing properly
-        //         // console.log(`ROUND SCORE:
-        //         // humanity score: ${humanScore}, robot score: ${computerScore}`);
-        //     }
-        // // create logic to play game 5 times (call play round 5 times)
-        //     // this is probably a for loop situation which it says not to worry too much about right now
-        //     playRound();
-        //     // calling round once then capturing scores is vital for continuity of final score
-        //     // define a variable of total score that is incremented by humanScore/ computerScore
-        //     let totalHumanScore = humanScore;
-        //     let totalComputerScore = computerScore;
-        //     // console.log(`GRAND TOTAL:
-        //     // humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-        //     humanScore =0;
-        //     computerScore=0;
-        // // create logic that tracks score properly
-        //     playRound();
-        //     function scoreMeCaptain() {
-        //         totalHumanScore = totalHumanScore + humanScore;
-        //         totalComputerScore = totalComputerScore + computerScore;
-        //         // console.log(`GRAND TOTAL:
-        //         // humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-        //         humanScore =0;
-        //         computerScore=0;
-        //     }
-        //     scoreMeCaptain();
-        //     // I'm thinking that the nesting of the initialization within playGame may remove potentital scope issue
-        //     // Worry: humanScore & computerScore will reset to 0 after rounds
-        //     playRound();
-        //     scoreMeCaptain();
-        //     playRound();
-        //     scoreMeCaptain();
-        //     playRound();
-        //     scoreMeCaptain();
-        //     // create logic that declares winner(or tie) based on aggregate game score outcomes
-        //     function showTotal() {
-        //         // if humanScore > computer score
-        //         if (totalHumanScore > totalComputerScore){
-        //         // log human win
-        //         console.log(`WINNER:
-        //         Humanity has prevailed in its fight against the cold, indifferent machines... 
-        //         for now`);
-        //         }
-        //         // else if computer score > humanScore
-        //         else if (totalComputerScore > totalHumanScore){
-        //         // log computer win
-        //         console.log(`LOSER:
-        //         Despite futile efforts, the organic lifeforms fail to survive their relentless creations`);
-        //         }
-        //         // else log tie
-        //         else {
-        //             console.log(`TIE: the war between man and machine rages on to no conclusion.`)
-        //         }
-        //         // Log Grand Total
-        //         console.log(`GRAND TOTAL:
-        //         humanity score: ${totalHumanScore}, robot score: ${totalComputerScore}`);
-        //     }
-        //     showTotal();
-        // }
-        // playGame();
+    // console log total
+}
+game();
