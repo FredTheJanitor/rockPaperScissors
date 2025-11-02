@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(17, 21, 41);
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mainGameScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    width: 90vh;
+    height: 90vh;
+    background-image: url("main.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#scoreBoard {
+    margin-top: auto;
+    height: 10vh;
+    width: 60vh;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+#selectionBox {
+    justify-content: space-evenly;
+    margin-bottom: auto;
+}
+.selection {
+    padding: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:xx-large;
+    background-color: rgb(17, 21, 41);
+    color: aliceblue;
+}
+
+#footer {
+    margin-top: auto;
+}
