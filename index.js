@@ -42,30 +42,38 @@ function game(){
         }
         // this picks a random number 1-3 inclusive
         let computerChoice = 1+Math.floor(Math.random()*3);
+        // score logic below
         if (playerChoice === computerChoice) {
-            console.log('tie');
+            if (playerChoice === 1){
+                console.log(`Tie: Dwayne the Rock Johnson ass bo'ah
+                        Rocky BalHOEah ass} bih'`);
+            } else if (playerChoice === 2){
+                console.log(`tie: Stuck in an infinite loop: paper vs paper, the crumpling, scribbling and tearing rages on for millenia without victor`)
+            } else {
+                console.log("Tie: both scissoring ;)")
+            }
         } else if (playerChoice === 1) {
             if (computerChoice === 2) {
-                console.log('computer wins');
+                console.log(`Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`);
                 grandTotalComputer += 1
             } else {
-                console.log('human wins');
+                console.log(`Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`);
                 grandTotalPlayer += 1
             }
         } else if (playerChoice === 2) {
             if (computerChoice === 3) {
-                console.log('computer wins');
+                console.log("Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords");
                 grandTotalComputer += 1
             } else {
-                console.log('human wins');
+                console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
                 grandTotalPlayer += 1
             }
         } else if (playerChoice === 3) {
             if (computerChoice === 1) {
-                console.log('computer wins');
+                console.log(`Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`);
                 grandTotalComputer += 1
             } else {
-                console.log('human wins');
+                console.log(`Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`);
                 grandTotalPlayer += 1
             }
         } else {
