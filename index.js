@@ -1,5 +1,5 @@
 console.log('Welcome to Rock Paper Scissors for the Future of Humanity');
-        
+
 // --I might just axe this whole thing ngl and wing it --//
 function game(){
     let grandTotalPlayer = 0
@@ -20,7 +20,7 @@ function game(){
             alert('ERROR - Player Did Not Input Rock Paper or Scissors');
             playerChoice = 0;
         }
-        // this picks a random number 1-3
+        // this picks a random number 1-3 inclusive
         let computerChoice = 1+Math.floor(Math.random()*3);
         if (playerChoice === computerChoice) {
             console.log('tie');
@@ -62,4 +62,4 @@ function game(){
 
     // console log total
 }
-game();
+// game();
