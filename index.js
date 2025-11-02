@@ -3,6 +3,7 @@ const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
 const scoreBoard = document.querySelector('#scoreBoard');
+const story = document.querySelector('#story');
 
 function game(){
     rockButton.addEventListener("click", runRock);
@@ -10,16 +11,25 @@ function game(){
     scissorsButton.addEventListener("click", runScissors);
 
     function runRock(e){
+        scoreBoard.textContent = "";
         let playerInput = "rock";
         round(playerInput);
+        scoreBoard.textContent += `Player: ${grandTotalPlayer}
+        Computer: ${grandTotalComputer}`;
     }
     function runPaper(e){
+        scoreBoard.textContent = "";
         let playerInput = "paper";
         round(playerInput);
+        scoreBoard.textContent += `Player: ${grandTotalPlayer}
+        Computer: ${grandTotalComputer}`
     }
     function runScissors(e){
+        scoreBoard.textContent = "";
         let playerInput = "scissors";
         round(playerInput);
+        scoreBoard.textContent += `Player: ${grandTotalPlayer}
+        Computer: ${grandTotalComputer}`
     }
 
 // --I might just axe this whole thing ngl and wing it --//
@@ -45,39 +55,39 @@ function game(){
         // score logic below
         if (playerChoice === computerChoice) {
             if (playerChoice === 1){
-                console.log(`Tie: Dwayne the Rock Johnson ass bo'ah
-                        Rocky BalHOEah ass} bih'`);
+                story.textContent = `Tie: Dwayne the Rock Johnson ass bo'ah
+                        Rocky BalHOEah ass bih'`;
             } else if (playerChoice === 2){
-                console.log(`tie: Stuck in an infinite loop: paper vs paper, the crumpling, scribbling and tearing rages on for millenia without victor`)
+                story.textContent = `tie: Stuck in an infinite loop: paper vs paper, the crumpling, scribbling and tearing rages on for millenia without victor`
             } else {
-                console.log("Tie: both scissoring ;)")
+                story.textContent = "Tie: both scissoring ;)"
             }
         } else if (playerChoice === 1) {
             if (computerChoice === 2) {
-                console.log(`Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`);
+                story.textContent = `Disgrace: the poor choice of rock, in the face of paper has cost the world a 14-minute reduction on the AI takeover timeline`;
                 grandTotalComputer += 1
             } else {
-                console.log(`Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`);
+                story.textContent = `Suck Sess! SMD robot Scum, your lesbian-scissoring, automated filth is no match for human rock!`;
                 grandTotalPlayer += 1
             }
         } else if (playerChoice === 2) {
             if (computerChoice === 3) {
-                console.log("Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords");
+                story.textContent = "Dispair: the machinistic scissoring overwhelmed our flimsy paper, soaking it in the juices of the robot-overlords";
                 grandTotalComputer += 1
             } else {
-                console.log(`Weiner: humanity has risen above the machines by selecting paper (which covers rock)`);
+                story.textContent = `Weiner: humanity has risen above the machines by selecting paper (which covers rock)`;
                 grandTotalPlayer += 1
             }
         } else if (playerChoice === 3) {
             if (computerChoice === 1) {
-                console.log(`Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`);
+                story.textContent = `Failure: humanity plunges into darkness as the androids smash our scissors into obscurity`;
                 grandTotalComputer += 1
             } else {
-                console.log(`Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`);
+                story.textContent = `Victorious! How great art thou bold heroe? snipping the testicular sheeth from betwixt the autonomous-enemy's apendages!`;
                 grandTotalPlayer += 1
             }
         } else {
-            console.log('ERROR: please try again')
+            story.textContent = 'ERROR: please try again'
         }
         // winner
     }

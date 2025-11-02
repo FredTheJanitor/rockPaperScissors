@@ -17,11 +17,21 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-#scoreBoard {
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#display {
+    display: flex;
+    flex-direction: column;
     margin-top: auto;
     height: 10vh;
     width: 60vh;
-    background-color: rgba(0, 0, 0, 0.514);
+    background-color: rgba(0, 0, 0, 0.767);
+    color: rgba(37, 255, 110, 0.884);
+    font-family: monospace;
+    padding: 1em;
 }
 #selectionBox {
     justify-content: space-evenly;
@@ -37,4 +47,12 @@ body {
 
 #footer {
     margin-top: auto;
+}
+
+#scoreBoard {
+    font-size: x-large;
+}
+#story {
+    margin-top: auto;
+    font-size: larger;
 }
