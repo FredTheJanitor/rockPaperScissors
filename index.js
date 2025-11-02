@@ -1,20 +1,39 @@
 console.log('Welcome to Rock Paper Scissors for the Future of Humanity');
+const rockButton = document.querySelector('#rock');
+const paperButton = document.querySelector('#paper');
+const scissorsButton = document.querySelector('#scissors');
+
+function game(){
+    rockButton.addEventListener("click", runRock);
+    paperButton.addEventListener("click", runPaper);
+    scissorsButton.addEventListener("click", runScissors);
+
+    function runRock(e){
+        let playerInput = "rock";
+        round(playerInput);
+    }
+    function runPaper(e){
+        let playerInput = "paper";
+        round(playerInput);
+    }
+    function runScissors(e){
+        let playerInput = "scissors";
+        round(playerInput);
+    }
 
 // --I might just axe this whole thing ngl and wing it --//
-function game(){
+
     let grandTotalPlayer = 0
     let grandTotalComputer = 0
     // each round should compare human input to random number
-    function round(){
-        let playerInput
+    function round(playerInput){
         let playerChoice 
-        playerInput = prompt();
         // assign rock value of 1, paper: 2 scissors: 3
-        if (playerInput.toLowerCase() === 'rock') {
+        if (playerInput === 'rock') {
             playerChoice = 1;
-        } else if (playerInput.toLowerCase() === 'paper') {
+        } else if (playerInput === 'paper') {
             playerChoice = 2;
-        } else if (playerInput.toLowerCase() === 'scissors'){
+        } else if (playerInput === 'scissors'){
             playerChoice = 3;
         } else {
             alert('ERROR - Player Did Not Input Rock Paper or Scissors');
@@ -53,13 +72,10 @@ function game(){
         }
         // winner
     }
-    round();
-    round();
-    console.log(grandTotalComputer);
-    console.log(grandTotalPlayer);
     // run rounds until win condition with loop
         // whichever winner add a point to total
 
     // console log total
 }
 // game();
+game();
