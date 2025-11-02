@@ -2,6 +2,7 @@ console.log('Welcome to Rock Paper Scissors for the Future of Humanity');
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
+const scoreBoard = document.querySelector('#scoreBoard');
 
 function game(){
     rockButton.addEventListener("click", runRock);
