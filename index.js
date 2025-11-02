@@ -59,19 +59,22 @@ console.log('Welcome to Rock Paper Scissors for the Future of Humanity');
                     alert("error computer returning somethin weird yo");
                 };
             }
-        // create logic to play game 5 times (call play round 5 times)
-            playRound();
-            let totalHumanScore = humanScore;
-            let totalComputerScore = computerScore;
-            humanScore =0;
-            computerScore=0;
-            playRound();
             function scoreMeCaptain() {
                 totalHumanScore = totalHumanScore + humanScore;
                 totalComputerScore = totalComputerScore + computerScore;
                 humanScore =0;
                 computerScore=0;
             }
+            function firstRoundScore() {
+                let totalHumanScore = humanScore;
+                let totalComputerScore = computerScore;
+                humanScore = 0;
+                computerScore = 0;
+            }
+        // create logic to play game 5 times (call play round 5 times)
+            playRound();
+            firstRoundScore()
+            playRound();
             scoreMeCaptain();
             playRound();
             scoreMeCaptain();
